@@ -10,14 +10,14 @@
 
 | часть | что это | репозиторий |
 |---|---|---|
-| `src/MedAppServer` | REST API: аптечки, упаковки, брони, справочник, синхронизация | [MedApp-Server](https://github.com/Kert0n/MedApp-Server) |
-| `src/AndroidApp` | клиент для Android | [MedApp-Android](https://github.com/Kert0n/MedApp-Android) |
-| `src/scrapper` | скраппер справочника vidal.ru, код одноразовый | [MedApp-Scrapper](https://github.com/Kert0n/MedApp-Scrapper) |
+| `src/MedAppServer` | REST API: аптечки, упаковки, брони, справочник, синхронизация | [MedAppServer](https://github.com/Kert0n/MedAppServer) |
+| `src/AndroidApp` | клиент для Android | [MedAppAndroid](https://github.com/Kert0n/MedAppAndroid) |
+| `src/scrapper` | скраппер справочника vidal.ru, код одноразовый | [VidalDataScrap](https://github.com/Kert0n/VidalDataScrap) |
 
 ## Клонировать
 
 ```bash
-git clone --recurse-submodules https://github.com/Kert0n/MedApp.git
+git clone --recurse-submodules https://github.com/Kert0n/MedAppDocs.git
 ```
 
 Без `--recurse-submodules` каталоги частей останутся пустыми. Уже клонировали без него:
@@ -39,11 +39,11 @@ git submodule update --remote src/MedAppServer
 |---|---|
 | [docs/](docs) | документы курсовой: ТЗ, описание программы, текст программы |
 | [docs/plans/](docs/plans) | планы, по которым шёл рефакторинг: фичи с критериями, устройство, ход работ |
-| [MedApp-Server/README](https://github.com/Kert0n/MedApp-Server#readme) | что умеет сервер, как запустить, перечень эндпоинтов |
-| [MedApp-Server/ARCHITECTURE.md](https://github.com/Kert0n/MedApp-Server/blob/main/ARCHITECTURE.md) | модель, слои, доступ, конкурентность, синхронизация |
+| [MedAppServer/README](https://github.com/Kert0n/MedAppServer#readme) | что умеет сервер, как запустить, перечень эндпоинтов |
+| [MedAppServer/ARCHITECTURE.md](https://github.com/Kert0n/MedAppServer/blob/main/ARCHITECTURE.md) | модель, слои, доступ, конкурентность, синхронизация |
 
 ## История
 
-Этот репозиторий создан при разделении на части. История разработки — в `MedApp-Server`: он и есть
+Этот репозиторий создан при разделении на части. История разработки — в `MedAppServer`: он и есть
 прежний `MedApp`, переименованный, чтобы вся история, PR и issue остались при коде, который они
 описывают.

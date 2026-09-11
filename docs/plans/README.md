@@ -35,5 +35,5 @@
 следующим. Уцелел только последний в каждой линии, и ссылаться на них здесь было бы обманом:
 имя указывало бы не на тот документ. Разбор каждого PR по отдельности — в самих PR, где описание
 полное, с замерами и отвергнутыми вариантами. Правила, закреплённые тестами, — в
-[ARCHITECTURE-RULES.md](https://github.com/Kert0n/MedApp-Server/blob/main/src/test/kotlin/org/kert0n/medappserver/ARCHITECTURE-RULES.md)
-сервера; устройство — в его [ARCHITECTURE.md](https://github.com/Kert0n/MedApp-Server/blob/main/ARCHITECTURE.md).
+[ARCHITECTURE-RULES.md](https://github.com/Kert0n/MedAppServer/blob/main/src/test/kotlin/org/kert0n/medappserver/ARCHITECTURE-RULES.md)
+сервера; устройство — в его [ARCHITECTURE.md](https://github.com/Kert0n/MedAppServer/blob/main/ARCHITECTURE.md).
