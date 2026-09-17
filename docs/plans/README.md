@@ -6,10 +6,13 @@
 названные риски и то, что решили **не** делать, — с поводом, по которому за это возьмутся.
 
 Лежат в зонтике, потому что охватывают больше одной части: рефакторинг шёл в сервере, но модели
-клиента и разделение репозиториев — уже про всё сразу.
+клиента и разделение репозиториев — уже про всё сразу. Здесь же лежит закрытый план клиента: он
+вёлся в самом репозитории Android-приложения, пока набор экранов не был сдан, и переехал сюда,
+когда работа по нему кончилась. Ссылки на его разделы из `AGENTS.md` клиента ведут в этот файл.
 
 | план | о чём | состояние |
 |---|---|---|
+| [android-ui-plan.md](android-ui-plan.md) | клиент целиком: продуктовые решения, модель, хранение, синхронизация, двадцать восемь экранов и план работ Base и UI | закрыт |
 | [ddd-refactor.md](ddd-refactor.md) | главный: фичи с критериями, устройство системы, все семнадцать PR | закрыт |
 | [cleanups-review-comments-branches.md](cleanups-review-comments-branches.md) | три уборки: ревью, комментарии, дерево веток | закрыт |
 | [final-stretch.md](final-stretch.md) | чем всё закончилось: четыре PR, оплаченный долг и что осталось | закрыт |
@@ -35,5 +38,5 @@
 следующим. Уцелел только последний в каждой линии, и ссылаться на них здесь было бы обманом:
 имя указывало бы не на тот документ. Разбор каждого PR по отдельности — в самих PR, где описание
 полное, с замерами и отвергнутыми вариантами. Правила, закреплённые тестами, — в
-[ARCHITECTURE-RULES.md](https://github.com/Kert0n/MedApp-Server/blob/main/src/test/kotlin/org/kert0n/medappserver/ARCHITECTURE-RULES.md)
-сервера; устройство — в его [ARCHITECTURE.md](https://github.com/Kert0n/MedApp-Server/blob/main/ARCHITECTURE.md).
+[ARCHITECTURE-RULES.md](https://github.com/Kert0n/MedAppServer/blob/main/src/test/kotlin/org/kert0n/medappserver/ARCHITECTURE-RULES.md)
+сервера; устройство — в его [ARCHITECTURE.md](https://github.com/Kert0n/MedAppServer/blob/main/ARCHITECTURE.md).
