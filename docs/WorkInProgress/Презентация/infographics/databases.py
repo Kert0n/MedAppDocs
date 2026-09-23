@@ -46,7 +46,7 @@ pairs = [
     (('med_kits', 'название, место хранения,\nпризнак публикации'), ('med_kits', 'только идентификатор'),
      'аптечка: у сервера нет\nдаже названия'),
     (('packages', 'остаток, версия,\nверсия броней'), ('user_drugs', 'остаток, версия,\nсумма и версия броней'),
-     'упаковка общей аптечки:\nостаток и версия'),
+     'лекарство общей аптечки:\nостаток и версия'),
     (('claims', 'брони: сумма и своя'), ('reservations', 'бронь каждого участника,\nключ через членство'),
      'устройство знает сумму и свою бронь,\nсервер: бронь каждого'),
     (('drug_templates', 'снимок справочника'), ('parsed_drugs', 'справочник,\nнеточный поиск pg_trgm'),
@@ -75,7 +75,7 @@ local = [
     ('courses · course_times\ncourse_sources', 'курсы, расписание,\nисточники и порядок', YELLOW),
     ('course_records\ncoverage_reductions', 'история лечения,\nсокращения обеспечения', YELLOW),
     ('sync_operations\nsync_operation_dependencies', 'очередь, замороженный\nзапрос, записанный ответ', '#FFFFFF'),
-    ('package_records · reminders\nactive_package_assignments', 'вечная запись об упаковке,\nнапоминания', '#FFFFFF'),
+    ('package_records · reminders\nactive_package_assignments', 'вечная запись о лекарстве,\nнапоминания', '#FFFFFF'),
 ]
 for i, (name, note, fill) in enumerate(local):
     x = L0 + (i % 2) * (cw + 14)

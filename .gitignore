@@ -46,3 +46,4 @@ docs/WorkInProgress/Пример2/ТП.pdf
 /docs/WorkInProgress/Презентация/navigo/
 # Порождается render.sh из theme.txt и *.body
 /docs/WorkInProgress/Презентация/infographics/*.mmd
+/docs/WorkInProgress/Презентация/infographics/__pycache__/
