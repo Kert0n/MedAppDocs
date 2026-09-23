@@ -1,0 +1,25 @@
+flowchart LR
+    user(("Человек"))
+    subgraph phone["Android-приложение · Kotlin, Jetpack Compose"]
+        ui["Экраны<br/>Material 3"]
+        room[("Room<br/>основное хранилище")]
+        q["Очередь операций"]
+        wm["Напоминания<br/>WorkManager, будильники"]
+        cam["Сканер<br/>CameraX + ML Kit"]
+    end
+    subgraph srv["Сервер · Kotlin, Spring Boot, Docker"]
+        api["REST API<br/>контракт OpenAPI"]
+        pg[("PostgreSQL<br/>общие аптечки, брони,<br/>справочник")]
+    end
+    crpt["Реестр «Честный знак»<br/>(ЦРПТ)"]
+    scr["Скраппер справочника<br/>Python, запускается разово"]
+    user --> ui
+    ui --- room
+    room --- q
+    room --- wm
+    cam --> ui
+    q -- "HTTPS: общие аптечки,<br/>брони, синхронизация" --> api
+    ui -. "подсказки справочника" .-> api
+    cam -- "код маркировки" --> crpt
+    api --- pg
+    scr -- "загрузка" --> pg
