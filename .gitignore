@@ -31,3 +31,18 @@ docs/WorkInProgress/Пример2/ПМИ.pdf
 docs/WorkInProgress/Пример2/РО.pdf
 docs/WorkInProgress/Пример2/ТП (1).pdf
 docs/WorkInProgress/Пример2/ТП.pdf
+/docs/WorkInProgress/Путинцева_В.А..pdf
+/docs/WorkInProgress/КурсоваяПрезентацияХазеевАА.pdf
+/docs/WorkInProgress/InCity Кудрявцев Презентация.pdf
+/docs/WorkInProgress/InCity. Клиентская часть.pdf
+# Брендбук ВШЭ: шрифты под своей лицензией и исходники логотипов в публичный репозиторий не идут
+/docs/WorkInProgress/Презентация/*.zip
+/docs/WorkInProgress/Презентация/Abbreviation_ENG/
+/docs/WorkInProgress/Презентация/Abbreviation_RUS/
+/docs/WorkInProgress/Презентация/HSE_Sans/
+/docs/WorkInProgress/Презентация/HSE_Slab/
+/docs/WorkInProgress/Презентация/Logo_HSE_full_rus/
+/docs/WorkInProgress/Презентация/Logo_HSE_full_rus_for_dark/
+/docs/WorkInProgress/Презентация/navigo/
+# Порождается render.sh из theme.txt и *.body
+/docs/WorkInProgress/Презентация/infographics/*.mmd
