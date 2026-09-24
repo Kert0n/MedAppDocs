@@ -1,0 +1,47 @@
+# Подмодули клиента и сервера указывают на свежий main своих репозиториев.
+#
+# Зонтик хранит не ветку, а коммит подмодуля, поэтому сам за main он не идёт: этот workflow
+# переставляет указатели на `main` (ветка названа в .gitmodules) и коммитит, если что-то сдвинулось.
+# Скрейпер приватный и живёт своей жизнью — его не трогаем.
+name: Подмодули на main
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  # Мгновенный повод из репозитория подмодуля: POST /repos/Kert0n/MedAppDocs/dispatches
+  # с {"event_type": "submodule-main"} — нужен токен с правом на этот репозиторий.
+  repository_dispatch:
+    types: [submodule-main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: submodules-main
+  cancel-in-progress: false
+
+jobs:
+  follow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Переставить подмодули на main
+        run: |
+          git submodule update --init --remote src/AndroidApp src/MedAppServer
+          if git diff --quiet -- src/AndroidApp src/MedAppServer; then
+            echo "Подмодули уже на свежем main"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add src/AndroidApp src/MedAppServer
+          {
+            echo "Подмодули указывают на свежий main"
+            echo
+            git diff --cached --submodule=log -- src/AndroidApp src/MedAppServer
+          } > "$RUNNER_TEMP/message"
+          git commit -F "$RUNNER_TEMP/message"
+          git push origin HEAD:main

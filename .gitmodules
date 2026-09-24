@@ -1,9 +1,11 @@
 [submodule "src/MedAppServer"]
 	path = src/MedAppServer
 	url = https://github.com/Kert0n/MedAppServer.git
+	branch = main
 [submodule "src/AndroidApp"]
 	path = src/AndroidApp
 	url = https://github.com/Kert0n/MedAppAndroid.git
+	branch = main
 [submodule "src/scrapper"]
 	path = src/scrapper
 	url = https://github.com/Kert0n/VidalDataScrap.git
