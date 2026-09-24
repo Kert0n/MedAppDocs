@@ -47,3 +47,5 @@ docs/WorkInProgress/Пример2/ТП.pdf
 # Порождается render.sh из theme.txt и *.body
 /docs/WorkInProgress/Презентация/infographics/*.mmd
 /docs/WorkInProgress/Презентация/infographics/__pycache__/
+# Заметка передачи контекста другому агенту: рабочая, не для репозитория
+/docs/WorkInProgress/Презентация/Передача контекста.md
