@@ -11,9 +11,9 @@ for body in *.body; do
   "$MMDC" -q -C font.css -i "$name.mmd" -o "$name.png" -b white -s 2
 done
 # Ручные схемы: смысл держится на раскладке, поэтому она задана явно.
-for script in databases.py capabilities.py claim.py knowledge.py; do
+for script in databases.py capabilities.py claim.py knowledge.py journal.py architecture.py; do
   python3 "$script"
 done
-for svg in 08-databases.svg 00-capabilities.svg 09-claim.svg 10-knowledge.svg; do
+for svg in 08-databases.svg 00-capabilities.svg 09-claim.svg 10-knowledge.svg 12-journal.svg 11-architecture.svg; do
   node svg2png.js "$svg" "${svg%.svg}.png" 2
 done
